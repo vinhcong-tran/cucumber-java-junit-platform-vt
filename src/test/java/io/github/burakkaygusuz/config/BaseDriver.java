@@ -1,4 +1,4 @@
-package com.burakkaygusuz.bdd.config;
+package io.github.burakkaygusuz.config;
 
 import org.openqa.selenium.remote.RemoteWebDriver;
 

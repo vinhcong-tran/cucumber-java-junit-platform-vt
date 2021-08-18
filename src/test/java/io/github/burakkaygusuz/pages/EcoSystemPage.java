@@ -1,4 +1,4 @@
-package com.burakkaygusuz.bdd.pages;
+package io.github.burakkaygusuz.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

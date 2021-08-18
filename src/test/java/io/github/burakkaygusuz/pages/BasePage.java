@@ -1,4 +1,4 @@
-package com.burakkaygusuz.bdd.pages;
+package io.github.burakkaygusuz.pages;
 
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;

@@ -1,9 +1,9 @@
-package com.burakkaygusuz.bdd.step_definitions;
+package io.github.burakkaygusuz.step_definitions;
 
-import com.burakkaygusuz.bdd.config.BaseDriver;
-import com.burakkaygusuz.bdd.pages.AboutPage;
-import com.burakkaygusuz.bdd.pages.EcoSystemPage;
-import com.burakkaygusuz.bdd.pages.HomePage;
+import io.github.burakkaygusuz.config.BaseDriver;
+import io.github.burakkaygusuz.pages.AboutPage;
+import io.github.burakkaygusuz.pages.EcoSystemPage;
+import io.github.burakkaygusuz.pages.HomePage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

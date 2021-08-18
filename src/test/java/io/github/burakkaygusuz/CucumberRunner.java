@@ -1,4 +1,4 @@
-package com.burakkaygusuz.bdd;
+package io.github.burakkaygusuz;
 
 import io.cucumber.junit.platform.engine.Cucumber;
 

@@ -1,6 +1,6 @@
-package com.burakkaygusuz.bdd.step_definitions;
+package io.github.burakkaygusuz.step_definitions;
 
-import com.burakkaygusuz.bdd.config.BaseDriver;
+import io.github.burakkaygusuz.config.BaseDriver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.firefox.FirefoxOptions;
