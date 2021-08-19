@@ -22,7 +22,7 @@ public class EcoSystemPage extends BasePage {
     }
 
     public List<WebElement> getDriverList() {
-        WebElement dataTable = driver.findElement(By.className("data-list"));
-        return dataTable.findElements(By.xpath("//td[@data-label='Browser']"));
+        WebElement dataTable = driver.findElement(By.xpath("//div[@class='col-sm-4 p-3']"));
+        return dataTable.findElements(By.xpath("//p[@class='card-title font-weight-bold text-center h6']/a"));
     }
 }

@@ -10,14 +10,14 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
-    @FindBy(xpath = "//span[contains(text(),'About')]")
-    private WebElement aboutNavItem;
+    @FindBy(css = "li[class='nav-item dropdown'] a[id='navbarDropdown']")
+    private WebElement aboutNavBarItem;
 
-    @FindBy(xpath = "//a[contains(text(),'About')]")
-    private WebElement aboutSubNavItem;
+    @FindBy(css = "a[href='/about']")
+    private WebElement aboutSeleniumDropDownItem;
 
-    public void goToAboutPage() {
-        aboutNavItem.click();
-        aboutSubNavItem.click();
+    public void navigateToAboutSeleniumPage() {
+        aboutNavBarItem.click();
+        aboutSeleniumDropDownItem.click();
     }
 }
