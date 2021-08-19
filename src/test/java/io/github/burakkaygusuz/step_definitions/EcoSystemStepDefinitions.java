@@ -1,7 +1,7 @@
 package io.github.burakkaygusuz.step_definitions;
 
 import io.github.burakkaygusuz.config.BaseDriver;
-import io.github.burakkaygusuz.pages.AboutPage;
+import io.github.burakkaygusuz.pages.AboutSeleniumPage;
 import io.github.burakkaygusuz.pages.EcoSystemPage;
 import io.github.burakkaygusuz.pages.HomePage;
 import io.cucumber.java.en.And;
@@ -18,25 +18,25 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class EcoSystemStepDefinitions {
 
     private final HomePage homePage;
-    private final AboutPage aboutPage;
+    private final AboutSeleniumPage aboutSeleniumPage;
     private final EcoSystemPage ecoSystemPage;
 
     public EcoSystemStepDefinitions(BaseDriver baseDriver) {
         RemoteWebDriver driver = baseDriver.getDriver();
         homePage = new HomePage(driver);
-        aboutPage = new AboutPage(driver);
+        aboutSeleniumPage = new AboutSeleniumPage(driver);
         ecoSystemPage = new EcoSystemPage(driver);
     }
 
     @Given("I want to get information from {string} page")
     public void iWantToGetInformationIntoPage(String headerName) {
-        homePage.goToAboutPage();
-        assertThat(aboutPage.getHeader().getText()).isEqualTo(headerName);
+        homePage.navigateToAboutSeleniumPage();
+        assertThat(aboutSeleniumPage.getHeader().getText()).isEqualTo(headerName);
     }
 
     @When("I go the ecosystem page")
     public void iGoTheEcosystemPage() {
-        aboutPage.clickViewEcoSystemButton();
+        aboutSeleniumPage.clickViewEcoSystemButton();
     }
 
     @And("I view the browser drivers list")
