@@ -6,12 +6,12 @@ Feature: Selenium EcoSystem
     And I view the browser drivers list
     Then I should see the "<webDriver>"
     Examples: Drivers
-      | webDriver             |
-      | Google ChromeDriver   |
-      | Microsoft Edge Driver |
-      | Mozilla GeckoDriver   |
-      | Opera ChromiumDriver  |
-      | Apple SafariDriver    |
+      | webDriver            |
+      | Google ChromeDriver  |
+      | Microsoft EdgeDriver |
+      | Mozilla GeckoDriver  |
+      | Opera ChromiumDriver |
+      | Apple SafariDriver   |
 
 
 
