@@ -16,7 +16,7 @@ Make sure you have installed and be configured the environment variables all the
 | macOS   | ```brew install openjdk@11```         | ```brew install maven```  |
 
 
-- Download the latest [Selenium Server Grid](https://selenium-release.storage.googleapis.com/4.0-beta-4/selenium-server-4.0.0-beta-4.jar) .jar file.
+- Download the latest [Selenium Server Grid](https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.0.0-rc-1/selenium-server-4.0.0-rc-1.jar) .jar file.
 
 ## Executing he Tests
 
@@ -35,7 +35,7 @@ $ cd cucumber-java-junit-platform
 - Start the Selenium Grid as standalone mode.
 
 ```java
-$ java -jar selenium-server-4.0.0-beta-4.jar standalone
+$ java -jar selenium-server-4.0.0-rc-1.jar standalone
 ```
 
 - Run the test.
