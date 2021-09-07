@@ -18,7 +18,7 @@ Make sure you have installed and be configured the environment variables all the
 
 - Download the latest [Selenium Server Grid](https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.0.0-rc-1/selenium-server-4.0.0-rc-1.jar) .jar file.
 
-## Executing he Tests
+## Executing the Tests
 
 - Clone the repository.
 
