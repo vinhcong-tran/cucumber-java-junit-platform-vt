@@ -26,8 +26,8 @@
         <!--Dependency Versions-->
         <assertj-core.version>3.20.2</assertj-core.version>
         <cucumber.version>6.11.0</cucumber.version>
-        <junit-platform.version>1.8.0-RC1</junit-platform.version>
         <junit-jupiter.version>5.8.0</junit-jupiter.version>
+        <junit-platform.version>1.8.0</junit-platform.version>
         <log4j.version>2.14.1</log4j.version>
         <selenium.version>4.0.0-rc-1</selenium.version>
         <!--Plugin Versions-->
