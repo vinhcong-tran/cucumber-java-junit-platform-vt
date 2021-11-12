@@ -1,8 +1,8 @@
 package io.github.burakkaygusuz.step_definitions;
 
-import io.github.burakkaygusuz.config.BaseDriver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.github.burakkaygusuz.config.BaseDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -24,7 +24,7 @@ public class Hooks {
 
         baseDriver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         baseDriver.getDriver().manage().window().maximize();
-        baseDriver.getDriver().get("http://selenium.dev");
+        baseDriver.getDriver().get("https://selenium.dev");
     }
 
     @After
