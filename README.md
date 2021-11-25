@@ -11,7 +11,7 @@ This is the demo project regarding how to execute the Cucumber scenarios using J
 Make sure you have installed and be configured the environment variables all the following prerequisites on your
 development machine:
 
-| OS      | Java JDK                      | Maven                 |
+| OS      | JDK                           | Maven                 |
 | ------- | ----------------------------- | --------------------- |
 | Windows | `choco install temurin17`     | `choco install maven` |
 | Linux   | `brew install --cask temurin` | `brew install maven`  |
