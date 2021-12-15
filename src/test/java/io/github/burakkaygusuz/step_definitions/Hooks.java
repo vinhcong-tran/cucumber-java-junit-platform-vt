@@ -19,7 +19,7 @@ public class Hooks {
     }
 
     @Before()
-    public void beforeScenario() throws MalformedURLException {
+    public synchronized void beforeScenario() throws MalformedURLException {
         baseDriver.setDriver(new RemoteWebDriver(new URL("http://localhost:4444"), new FirefoxOptions()));
 
         baseDriver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -28,7 +28,7 @@ public class Hooks {
     }
 
     @After
-    public void afterScenario() {
+    public synchronized void afterScenario() {
         baseDriver.getDriver().quit();
     }
 
