@@ -34,8 +34,8 @@ cd cucumber-java-junit-platform
 
 - Execute the .yml file to starting the Selenium Grid.
 
-```sh
-docker-compose -f docker-compose-v3.yml up
+```shell
+docker-compose -f docker-compose.yml up
 ```
 
 - Run the test.

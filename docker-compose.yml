@@ -1,11 +1,11 @@
-# To execute this docker-compose yml file use `docker-compose -f docker-compose-v3.yml up`
+# To execute this docker-compose yml file use `docker-compose -f docker-compose.yml up`
 # Add the `-d` flag at the end for detached execution
 # Change "SE_NODE_GRID_URL=http://localhost:4444" to the URL/IP where the Grid is accessible.
-# To stop the execution, hit Ctrl+C, and then `docker-compose -f docker-compose-v3.yml down`
+# To stop the execution, hit Ctrl+C, and then `docker-compose -f docker-compose.yml down`
 version: "3"
 services:
   chrome:
-    image: selenium/node-chrome:4.1.1
+    image: selenium/node-chrome:4.1.2
     shm_size: 2gb
     depends_on:
       - selenium-hub
@@ -18,7 +18,7 @@ services:
       - "6900:5900"
 
   firefox:
-    image: selenium/node-firefox:4.1.1
+    image: selenium/node-firefox:4.1.2
     shm_size: 2gb
     depends_on:
       - selenium-hub
@@ -31,7 +31,7 @@ services:
       - "6902:5900"
 
   selenium-hub:
-    image: selenium/hub:4.1.1
+    image: selenium/hub:4.1.2
     container_name: selenium-hub
     ports:
       - "4442:4442"
