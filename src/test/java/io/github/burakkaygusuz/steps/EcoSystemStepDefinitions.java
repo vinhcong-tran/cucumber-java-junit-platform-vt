@@ -1,4 +1,4 @@
-package io.github.burakkaygusuz.step_definitions;
+package io.github.burakkaygusuz.steps;
 
 import io.github.burakkaygusuz.config.BaseDriver;
 import io.github.burakkaygusuz.pages.AboutSeleniumPage;

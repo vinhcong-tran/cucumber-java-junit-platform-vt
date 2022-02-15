@@ -1,4 +1,4 @@
-package io.github.burakkaygusuz.step_definitions;
+package io.github.burakkaygusuz.steps;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -19,7 +19,7 @@ public class Hooks {
     }
 
     @Before()
-    public synchronized void beforeScenario() throws MalformedURLException {
+    public void beforeScenario() throws MalformedURLException {
         baseDriver.setDriver(new RemoteWebDriver(new URL("http://localhost:4444"), new FirefoxOptions()));
 
         baseDriver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -28,7 +28,7 @@ public class Hooks {
     }
 
     @After
-    public synchronized void afterScenario() {
+    public void afterScenario() {
         baseDriver.getDriver().quit();
     }
 
