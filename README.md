@@ -12,9 +12,9 @@ Make sure you have installed and be configured the environment variables all the
 development machine:
 
 | OS      | JDK                           | Maven                 |
-| ------- | ----------------------------- | --------------------- |
+|---------|-------------------------------|-----------------------|
 | Windows | `choco install temurin17`     | `choco install maven` |
-| Linux   | `brew install --cask temurin` | `brew install maven`  |
+| macOS   | `brew install --cask temurin` | `brew install maven`  |
 
 - Install [Docker Compose](https://docs.docker.com/compose/install/) .
 
@@ -22,13 +22,13 @@ development machine:
 
 - Clone the repository.
 
-```git
+```shell
 git clone git@github.com:burakkaygusuz/cucumber-java-junit-platform.git
 ```
 
 - Change the directory.
 
-```sh
+```shell
 cd cucumber-java-junit-platform
 ```
 
@@ -40,6 +40,6 @@ docker-compose -f docker-compose.yml up
 
 - Run the test.
 
-```mvn
+```shell
 mvn clean test
 ```
