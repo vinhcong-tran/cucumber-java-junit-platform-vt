@@ -10,7 +10,7 @@ public class BaseDriver {
         return driver.get();
     }
 
-    public void setDriver(RemoteWebDriver driver) {
+    public synchronized void setDriver(RemoteWebDriver driver) {
         this.driver.set(driver);
     }
 }
