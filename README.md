@@ -6,17 +6,15 @@
 
 This is the demo project regarding how to execute the Cucumber scenarios using JUnit Jupiter Platform Engine.
 
-## Requirements
+## Prerequisites
 
 Make sure you have installed and be configured the environment variables all the following prerequisites on your
 development machine:
 
-| OS      | JDK                           | Maven                 |
-|---------|-------------------------------|-----------------------|
-| Windows | `choco install temurin17`     | `choco install maven` |
-| macOS   | `brew install --cask temurin` | `brew install maven`  |
-
-- Install [Docker Compose](https://docs.docker.com/compose/install/) .
+| OS      | JDK                                  | Maven                 | Docker Compose                 |
+|---------|--------------------------------------|-----------------------|--------------------------------|
+| Windows | `scoop install java/temurin-lts-jdk` | `scoop install maven` | `scoop install docker-compose` |
+| macOS   | `brew install --cask temurin`        | `brew install maven`  | `brew install docker-compose`  |
 
 ## Executing the Tests
 
