@@ -1,17 +1,20 @@
 Feature: Selenium EcoSystem
 
-  Scenario Outline: Verify the current drivers
-    Given I want to get information from "About Selenium" page
-    When I go the ecosystem page
-    And I view the browser drivers list
-    Then I should see the "<webDriver>"
-    Examples: Drivers
+  Background: Open Selenium page URL
+    Given the user navigates to "https://selenium.dev"
+
+  Scenario Outline: Verify the supported browsers
+    Given the user would like to get further information by "About Selenium"
+    When views the "Ecosystem" page
+    And observes the "Browser Drivers"
+    Then should see the supported web drivers
+      | webDriver   |
+      | <webDriver> |
+
+    Examples: Supported WebDrivers
       | webDriver            |
       | Google ChromeDriver  |
       | Microsoft EdgeDriver |
       | Mozilla GeckoDriver  |
       | Opera ChromiumDriver |
       | Apple SafariDriver   |
-
-
-

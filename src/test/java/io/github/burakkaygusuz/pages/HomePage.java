@@ -16,7 +16,7 @@ public class HomePage extends BasePage {
     @FindBy(css = "a[href='/about']")
     private WebElement aboutSeleniumDropDownItem;
 
-    public void navigateToAboutSeleniumPage() {
+    public void goToAboutSeleniumPage() {
         aboutNavBarItem.click();
         aboutSeleniumDropDownItem.click();
     }

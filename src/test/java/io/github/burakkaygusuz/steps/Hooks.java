@@ -8,6 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.RemoteWebDriverBuilder;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -22,19 +23,18 @@ public class Hooks {
         this.baseDriver = baseDriver;
     }
 
-    @Before()
+    @Before
     public void beforeScenario(Scenario scenario) throws MalformedURLException {
-        LOGGER.info("Scenario " + scenario.getName() + " started");
+        LOGGER.info("Scenario: " + scenario.getName() + " started");
         baseDriver.setDriver(new RemoteWebDriver(new URL("http://localhost:4444"), new FirefoxOptions()));
 
         baseDriver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         baseDriver.getDriver().manage().window().maximize();
-        baseDriver.getDriver().get("https://selenium.dev");
     }
 
     @After
     public void afterScenario(Scenario scenario) {
         baseDriver.getDriver().quit();
-        LOGGER.info("Scenario " + scenario.getName() + " finished.Status: " + scenario.isFailed());
+        LOGGER.info("Scenario: " + scenario.getName() + " finished.Status: " + scenario.isFailed());
     }
 }
