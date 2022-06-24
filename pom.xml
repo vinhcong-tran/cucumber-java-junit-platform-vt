@@ -11,13 +11,6 @@
     <name>Cucumber Java JUnit Platform</name>
     <description>Use JUnit Platform to execute Cucumber scenarios</description>
 
-    <licenses>
-        <license>
-            <name>Apache 2</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Environment Versions -->
