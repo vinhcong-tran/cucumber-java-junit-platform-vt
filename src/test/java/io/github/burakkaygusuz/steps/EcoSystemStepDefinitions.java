@@ -11,7 +11,9 @@ import io.github.burakkaygusuz.pages.EcoSystemPage;
 import io.github.burakkaygusuz.pages.HomePage;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -61,14 +63,14 @@ public class EcoSystemStepDefinitions {
 
     @Then("should see the supported web drivers")
     public void shouldSeeTheSupportedWebDrivers(DataTable dataTable) {
-        List<List<String>> drivers = dataTable.asLists(String.class);
+        List<Map<String, String>> webDrivers = dataTable.asMaps(String.class, String.class);
+        String webDriver = webDrivers.get(0).get("webDriver");
+        List<String> supportedWebDrivers = new ArrayList<>();
 
-        for (List<String> driver : drivers) {
-            System.out.println(driver);
-
-            for (int i = 0; i < ecoSystemPage.getSupportedWebDrivers().size(); i++) {
-                assertThat(ecoSystemPage.getSupportedWebDrivers().get(i).getText()).isEqualTo(driver.get(0));
-            }
+        for (int i = 0; i < ecoSystemPage.getSupportedWebDrivers().size(); i++) {
+            String supportedBrowser = ecoSystemPage.getSupportedWebDrivers().get(i).getText();
+            supportedWebDrivers.add(supportedBrowser);
         }
+        assertThat(supportedWebDrivers).isNotNull().contains(webDriver);
     }
 }
