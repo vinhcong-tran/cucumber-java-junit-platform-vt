@@ -8,7 +8,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.remote.RemoteWebDriverBuilder;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -35,6 +34,6 @@ public class Hooks {
     @After
     public void afterScenario(Scenario scenario) {
         baseDriver.getDriver().quit();
-        LOGGER.info("Scenario: " + scenario.getName() + " finished.Status: " + scenario.isFailed());
+        LOGGER.info("Scenario: " + scenario.getName() + " finished.Status: " + scenario.getStatus());
     }
 }
