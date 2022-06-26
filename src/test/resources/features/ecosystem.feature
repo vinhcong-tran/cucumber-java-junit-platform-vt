@@ -4,8 +4,8 @@ Feature: Selenium EcoSystem
     Given the user navigates to "https://selenium.dev"
 
   Scenario Outline: Verify the supported browsers
-    Given the user would like to get further information by "About Selenium"
-    When views the "Ecosystem" page
+    When would like to get further information by "About Selenium"
+    And views the "Ecosystem" page
     And observes the "Browser Drivers"
     Then should see the supported web drivers
       | webDriver   |
@@ -13,8 +13,8 @@ Feature: Selenium EcoSystem
 
     Examples: Supported WebDrivers
       | webDriver            |
-      | Google ChromeDriver  |
-      | Microsoft EdgeDriver |
       | Mozilla GeckoDriver  |
+      | Microsoft EdgeDriver |
+      | Google ChromeDriver  |
       | Opera ChromiumDriver |
       | Apple SafariDriver   |
