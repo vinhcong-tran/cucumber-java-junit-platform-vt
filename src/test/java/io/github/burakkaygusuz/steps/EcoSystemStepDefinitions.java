@@ -35,7 +35,7 @@ public class EcoSystemStepDefinitions {
         assertThat(driver.getTitle()).isEqualTo("Selenium");
     }
 
-    @Given("the user would like to get further information by {string}")
+    @And("would like to get further information by {string}")
     public void theUserWouldLikeToGetFurtherInformationBy(String header) {
         homePage.goToAboutSeleniumPage();
         assertThat(aboutSeleniumPage.getHeaderText())
