@@ -19,7 +19,7 @@
         <!--Dependency Versions-->
         <assertj-core.version>3.23.1</assertj-core.version>
         <cucumber.version>7.4.1</cucumber.version>
-        <junit-platform.version>1.9.0-M1</junit-platform.version>
+        <junit-platform.version>1.9.0-RC1</junit-platform.version>
         <log4j.version>2.18.0</log4j.version>
         <selenium.version>4.3.0</selenium.version>
         <!--Plugin Versions-->
