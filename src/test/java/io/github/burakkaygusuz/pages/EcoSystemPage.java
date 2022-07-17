@@ -20,6 +20,9 @@ public class EcoSystemPage extends BasePage {
     @FindBy(css = "#browser-drivers")
     private WebElement subHeader;
 
+    @FindBy(xpath = "//div[@class='col-sm-4 p-3']")
+    private WebElement dataTable;
+
     public String getMainHeaderText() {
         return mainHeader.getText();
     }
@@ -33,7 +36,6 @@ public class EcoSystemPage extends BasePage {
     }
 
     public List<WebElement> getSupportedWebDrivers() {
-        WebElement dataTable = driver.findElement(By.xpath("//div[@class='col-sm-4 p-3']"));
         return dataTable.findElements(By.xpath("//p[@class='card-title font-weight-bold text-center h6']/a"));
     }
 }
