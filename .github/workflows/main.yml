@@ -19,8 +19,18 @@ jobs:
           distribution: "temurin"
           cache: maven
 
-      - name: Start Selenium Docker Grid Setup
+      - name: Start Selenium Docker Grid setup
         run: docker-compose -f "docker-compose.yml" up -d --build
 
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
       - name: Build with Maven
-        run: mvn clean test
+        run: mvn --batch-mode --update-snapshots clean compile
+      - name: Run the tests
+        run: mvn test
