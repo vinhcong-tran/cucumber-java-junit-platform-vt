@@ -34,7 +34,7 @@ public class Hooks {
     }
 
     @After
-    public void afterScenario(Scenario scenario) {
+    public synchronized void afterScenario(Scenario scenario) {
         baseDriver.getDriver().quit();
         LOGGER.info("Scenario: " + scenario.getName() + " finished.Status: " + scenario.getStatus());
     }
