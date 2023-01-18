@@ -10,18 +10,16 @@ import java.util.List;
 
 public class EcoSystemPage extends BasePage {
 
+    @FindBy(tagName = "h1")
+    private WebElement mainHeader;
+    @FindBy(css = "#browser-drivers")
+    private WebElement subHeader;
+    @FindBy(xpath = "//div[@class='col-sm-4 p-3']")
+    private WebElement dataTable;
+
     public EcoSystemPage(RemoteWebDriver driver) {
         super(driver);
     }
-
-    @FindBy(tagName = "h1")
-    private WebElement mainHeader;
-
-    @FindBy(css = "#browser-drivers")
-    private WebElement subHeader;
-
-    @FindBy(xpath = "//div[@class='col-sm-4 p-3']")
-    private WebElement dataTable;
 
     public String getMainHeaderText() {
         return mainHeader.getText();
