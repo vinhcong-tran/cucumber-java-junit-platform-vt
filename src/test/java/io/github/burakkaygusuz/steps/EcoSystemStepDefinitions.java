@@ -41,7 +41,7 @@ public class EcoSystemStepDefinitions {
     public void theUserWouldLikeToGetFurtherInformationBy(String header) {
         homePage.goToAboutSeleniumPage();
         assertThat(aboutSeleniumPage.getHeaderText())
-                .withFailMessage(() -> "Main header text should be " + aboutSeleniumPage.getHeaderText() + " but " + header)
+                .withFailMessage(() -> "Main header text should be %s but %s".formatted(aboutSeleniumPage.getHeaderText(), header))
                 .isEqualTo(header);
     }
 
@@ -49,7 +49,7 @@ public class EcoSystemStepDefinitions {
     public void viewsThePage(String header) {
         aboutSeleniumPage.clickViewEcoSystemButton();
         assertThat(ecoSystemPage.getMainHeaderText())
-                .withFailMessage(() -> "Main header text should be " + ecoSystemPage.getMainHeaderText() + " but " + header)
+                .withFailMessage(() -> "Main header text should be %s but %s".formatted(ecoSystemPage.getMainHeaderText(), header))
                 .isEqualTo(header);
     }
 
@@ -57,7 +57,7 @@ public class EcoSystemStepDefinitions {
     public void observesThe(String subHeader) {
         ecoSystemPage.scrollToBrowserDrivers();
         assertThat(ecoSystemPage.getSubHeaderText())
-                .withFailMessage(() -> "Sub header text should be " + ecoSystemPage.getSubHeaderText() + " but " + subHeader)
+                .withFailMessage(() -> "Sub header text should be %s but %s".formatted(ecoSystemPage.getSubHeaderText(), subHeader))
                 .isEqualTo(subHeader);
     }
 
