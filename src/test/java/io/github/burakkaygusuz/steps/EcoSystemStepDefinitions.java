@@ -67,10 +67,7 @@ public class EcoSystemStepDefinitions {
         String webDriver = webDrivers.get(0).get("webDriver");
         List<String> supportedWebDrivers = new ArrayList<>();
 
-        for (int i = 0; i < ecoSystemPage.getSupportedWebDrivers().size(); i++) {
-            String supportedBrowser = ecoSystemPage.getSupportedWebDrivers().get(i).getText();
-            supportedWebDrivers.add(supportedBrowser);
-        }
-        assertThat(supportedWebDrivers).isNotNull().contains(webDriver);
+        ecoSystemPage.getSupportedWebDrivers().forEach(wd -> supportedWebDrivers.add(wd.getText()));
+        assertThat(supportedWebDrivers).isNotNull().containsAnyOf(webDriver);
     }
 }
