@@ -1,17 +1,17 @@
 package io.github.burakkaygusuz.pages;
 
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
 
     protected RemoteWebDriver driver;
-    protected Actions actions;
+    protected JavascriptExecutor javascriptExecutor;
 
     public BasePage(RemoteWebDriver driver) {
         this.driver = driver;
-        this.actions = new Actions(driver);
+        javascriptExecutor = driver;
         PageFactory.initElements(driver, this);
     }
 }

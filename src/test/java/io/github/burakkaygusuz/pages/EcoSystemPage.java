@@ -1,7 +1,6 @@
 package io.github.burakkaygusuz.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
@@ -30,7 +29,7 @@ public class EcoSystemPage extends BasePage {
     }
 
     public void scrollToBrowserDrivers() {
-        actions.sendKeys(Keys.DOWN).build().perform();
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", subHeader);
     }
 
     public List<WebElement> getSupportedWebDrivers() {
