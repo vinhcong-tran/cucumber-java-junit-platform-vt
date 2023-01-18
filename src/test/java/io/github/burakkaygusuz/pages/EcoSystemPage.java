@@ -14,7 +14,7 @@ public class EcoSystemPage extends BasePage {
     private WebElement mainHeader;
     @FindBy(css = "#browser-drivers")
     private WebElement subHeader;
-    @FindBy(xpath = "//div[@class='col-sm-4 p-3']")
+    @FindBy(css = "div.col-sm-4")
     private WebElement dataTable;
 
     public EcoSystemPage(RemoteWebDriver driver) {
@@ -34,6 +34,6 @@ public class EcoSystemPage extends BasePage {
     }
 
     public List<WebElement> getSupportedWebDrivers() {
-        return dataTable.findElements(By.xpath("//p[@class='card-title font-weight-bold text-center h6']/a"));
+        return dataTable.findElements(By.cssSelector("p.card-title a"));
     }
 }

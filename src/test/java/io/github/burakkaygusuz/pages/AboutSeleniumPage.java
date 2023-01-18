@@ -10,7 +10,7 @@ public class AboutSeleniumPage extends BasePage {
     @FindBy(tagName = "h1")
     private WebElement header;
 
-    @FindBy(xpath = "//a[normalize-space()='View ecosystem']")
+    @FindBy(css = "div[class='row -bg-selenium-green-45'] a")
     private WebElement viewEcoSystemButton;
 
     public AboutSeleniumPage(RemoteWebDriver driver) {
