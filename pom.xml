@@ -18,7 +18,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <!--Dependency Versions-->
         <assertj-core.version>3.24.2</assertj-core.version>
-        <cucumber.version>7.11.1</cucumber.version>
+        <cucumber.version>7.11.2</cucumber.version>
         <junit-platform.version>1.9.2</junit-platform.version>
         <log4j.version>2.20.0</log4j.version>
         <selenium.version>4.8.3</selenium.version>
