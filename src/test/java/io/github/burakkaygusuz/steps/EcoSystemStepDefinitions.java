@@ -31,14 +31,14 @@ public class EcoSystemStepDefinitions {
         ecoSystemPage = new EcoSystemPage(driver);
     }
 
-    @Given("the user navigates to {string}")
-    public void theUserNavigatesTo(String url) {
-        driver.navigate().to(url);
-        assertThat(driver.getTitle()).isEqualTo("Selenium");
+    @Given("the user navigates to the official {string} page")
+    public void theUserNavigatesToTheOfficialPage(String page) {
+        driver.navigate().to("https://www.selenium.dev");
+        assertThat(driver.getTitle()).isEqualTo(page);
     }
 
-    @And("would like to get further information by {string}")
-    public void theUserWouldLikeToGetFurtherInformationBy(String header) {
+    @And("they would like to get further information by {string}")
+    public void theyWouldLikeToGetFurtherInformationBy(String header) {
         homePage.goToAboutSeleniumPage();
         assertThat(aboutSeleniumPage.getHeaderText())
                 .withFailMessage(() -> "Main header text should be %s but %s".formatted(aboutSeleniumPage.getHeaderText(), header))
@@ -61,8 +61,8 @@ public class EcoSystemStepDefinitions {
                 .isEqualTo(subHeader);
     }
 
-    @Then("should see the supported web drivers")
-    public void shouldSeeTheSupportedWebDrivers(DataTable dataTable) {
+    @Then("the supported web drivers should be listed")
+    public void theSupportedWebDriversShouldBeListed(DataTable dataTable) {
         List<Map<String, String>> webDrivers = dataTable.asMaps(String.class, String.class);
         String webDriver = webDrivers.get(0).get("webDriver");
         List<String> supportedWebDrivers = new ArrayList<>();
@@ -70,4 +70,6 @@ public class EcoSystemStepDefinitions {
         ecoSystemPage.getSupportedWebDrivers().forEach(wd -> supportedWebDrivers.add(wd.getText()));
         assertThat(supportedWebDrivers).isNotNull().containsAnyOf(webDriver);
     }
+
+
 }

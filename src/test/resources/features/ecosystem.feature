@@ -1,13 +1,13 @@
 Feature: Selenium EcoSystem
 
   Background: Open Selenium page URL
-    Given the user navigates to "https://selenium.dev"
+    Given the user navigates to the official "Selenium" page
 
   Scenario: Verify the supported browsers
-    When would like to get further information by "About Selenium"
+    When they would like to get further information by "About Selenium"
     And views the "Ecosystem" page
     And observes the "Browser Drivers"
-    Then should see the supported web drivers
+    Then the supported web drivers should be listed
       | webDriver            |
       | Mozilla GeckoDriver  |
       | Microsoft EdgeDriver |
