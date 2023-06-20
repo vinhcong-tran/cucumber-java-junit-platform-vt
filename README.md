@@ -30,10 +30,10 @@ git clone git@github.com:burakkaygusuz/cucumber-java-junit-platform.git
 cd cucumber-java-junit-platform
 ```
 
-- Execute the .yml file to starting the Selenium Grid.
+- Execute docker-compose.sh file to starting the Selenium Grid.
 
 ```shell
-docker-compose -f docker-compose.yml up
+./docker-compose.sh
 ```
 
 - Run the test.
